@@ -1,0 +1,150 @@
+.booking-form {
+  @include reset;
+  @include d-flex(wrap, row, center, stretch);
+  width: 100%;
+  margin-top: 27px;
+  background-color: #fff;
+  border: 3px solid $brand-color-4;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(#53C9FE, .44);
+}
+
+.booking-form__select-wrapper {
+  position: relative;
+  height: 60px;
+  cursor: pointer;
+
+  &:not(:last-of-type) {
+    border-bottom: 1px solid #D6D6D6;
+  }
+
+  &::before,
+  &::after {
+    @include abs-pseudo;
+    width: 24px;
+    height: 24px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    transform: translateY(-50%);
+    pointer-events: none;
+  }
+
+  &::before {
+    top: 50%;
+    left: 8px;
+  }
+
+  &::after {
+    top: 50%;
+    right: 8px;
+  }
+
+  &--hotel {
+    width: 100%;
+
+    &::before {
+      background-image: url("../img/icon-pin.svg");
+    }
+
+    &::after {
+      background-image: none;
+    }
+  }
+
+  &--checkin {
+    width: 50%;
+
+    &::before {
+      background-image: url("../img/icon-calendar.svg");
+    }
+
+    &::after {
+      background-image: url("../img/icon-select-arrows.svg");
+    }
+  }
+
+  &--checkout {
+    width: 50%;
+
+    &::before {
+      background-image: url("../img/icon-calendar.svg");
+    }
+
+    &::after {
+      background-image: url("../img/icon-select-arrows.svg");
+    }
+  }
+
+  &--people {
+    width: 100%;
+
+    &::before {
+      background-image: url("../img/icon-person.svg");
+    }
+
+    &::after {
+      background-image: url("../img/icon-select-arrows.svg");
+    }
+  }
+}
+
+.booking-form__select {
+  width: 100%;
+  height: 100%;
+  padding-right: 8px;
+  padding-left: 40px;
+  border: none;
+  appearance: none;
+  cursor: pointer;
+}
+
+.booking-form__select option {
+  @include reset;
+}
+
+.booking-form__submit-btn {
+  @include reset;
+  display: flex;
+  width: 100%;
+  height: 60px;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-weight: bold;
+  font-size: 18px;
+  background-color: $brand-color-6;
+  border-radius: 3px;
+  border: none;
+  cursor: pointer;
+}
+
+@media (min-width: $tablet-width) {
+  .booking-form {
+    flex-wrap: nowrap;
+  }
+
+  .booking-form__select-wrapper {
+    flex-basis: 25%;
+    flex-grow: 1;
+    flex-shrink: 1;
+    width: auto;
+    border-bottom: none;
+
+    &:not(:last-of-type) {
+      border-right: 1px solid #D6D6D6;
+    }
+
+    &--checkout {
+      display: none;
+    }
+  }
+
+  .booking-form__select {
+    width: 100%;
+  }
+
+  .booking-form__submit-btn {
+    width: 267px;
+  }
+}

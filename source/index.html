@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="vendor/css/bootstrapbootstrap-grid.min.css">
+  <link rel="stylesheet" href="vendor/css/bootstrap/bootstrap-grid.min.css">
   <link rel="stylesheet" href="css/style.min.css">
   <title>Travelto</title>
 </head>
@@ -92,14 +92,54 @@
       </ul>
     </nav>
   </header>
-
   <main class="main">
+    <section class="booking-search">
+      <div class="booking-search__contains wrapper">
+        <h1 class="booking-search__heading">
+          Забронируйте уникальное жилье быстро и просто
+        </h1>
+        <h2 class="booking-search__subheading">
+          Лучший способ арендовать квартиру
+        </h2>
+        <form class="booking-search__search-form booking-form" action="" method="post">
+          <div class="booking-form__select-wrapper booking-form__select-wrapper--hotel">
+            <select class="booking-form__select booking-form__select--hotel" id="formHotel" name="hotel">
+              <option value="hotel-1">Отель</option>
+              <option value="hotel-2">Название отеля</option>
+              <option value="hotel-3">Название отеля</option>
+            </select>
+          </div>
+          <div class="booking-form__select-wrapper booking-form__select-wrapper--checkin">
+            <select class="booking-form__select booking-form__select--checkin" id="formCheckIn" name="checkin">
+              <option value="checkin-1">Заезд</option>
+              <option value="checkin-2">Заезд</option>
+              <option value="checkin-3">Заезд</option>
+            </select>
+          </div>
+          <div class="booking-form__select-wrapper booking-form__select-wrapper--checkout">
+            <select class="booking-form__select booking-form__select--checkout" id="formCheckOut" name="checkout">
+              <option value="checkout-1">Отъезд</option>
+              <option value="checkout-2">Отъезд</option>
+              <option value="checkout-3">Отъезд</option>
+            </select>
+          </div>
+          <div class="booking-form__select-wrapper booking-form__select-wrapper--people">
+            <select class="booking-form__select booking-form__select--people" id="formPeople" name="people">
+              <option value="people-1">2 взрослых - один номер</option>
+              <option value="people-2">3 взрослых - один номер</option>
+              <option value="people-3">4 взрослых - один номер</option>
+            </select>
+          </div>
+          <button class="booking-form__submit-btn" type="submit">Начать поиск</button>
+        </form>
+      </div>
+    </section>
 
   </main>
 
   <footer class="footer">
 
   </footer>
-  <script src="js/script.min.js"></script>
+  <script src="js/script.js"></script>
 </body>
 </html>

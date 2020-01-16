@@ -1,6 +1,8 @@
 .header-top__wrapper {
   @include d-flex(nowrap, row, space-between, stretch);
   min-height: 75px;
+  padding-right: 0;
+  padding-left: 0;
   background-color: $brand-color-5;
 }
 

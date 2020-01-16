@@ -1,0 +1,60 @@
+.booking-search {
+  height: 406px;
+  background-image: url("../img/banner-index-mobile.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center bottom;
+}
+
+.booking-search__heading {
+  @include reset;
+  max-width: 228px;
+  padding-top: 37px;
+  color: #1C8EC0;
+  font-size: 21px;
+  font-weight: bold;
+}
+
+.booking-search__subheading {
+  display: none;
+}
+
+.booking-search__search-form {
+  padding-top: 27px;
+}
+
+@media (min-width: $tablet-width) {
+  .booking-search {
+    height: 368px;
+    background-image: url("../img/banner-index-desktop.png");
+  }
+
+  .booking-search__heading {
+    font-size: 24px;
+  }
+
+  .booking-search__subheading {
+    @include reset;
+    display: inline;
+    color: #000;
+    font-size: 15px;
+    font-weight: normal;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .booking-search {
+    background-image: url("../img/banner-index-desktop.png");
+    background-position: center top;
+  }
+
+  .booking-search__heading {
+    max-width: 450px;
+    padding-top: 73px;
+    font-size: 28px;
+  }
+
+  .booking-search__subheading {
+    padding-top: 34px;
+  }
+}
