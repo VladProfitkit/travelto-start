@@ -1,0 +1,18 @@
+.wrapper {
+  width: auto;
+  margin: 0 auto;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+@media (min-width: $tablet-width) {
+  .wrapper {
+    width: 738px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .wrapper {
+    width: 1280px;
+  }
+}

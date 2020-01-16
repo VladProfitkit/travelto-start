@@ -1,0 +1,253 @@
+.header-top__wrapper {
+  @include d-flex(nowrap, row, space-between, stretch);
+  min-height: 75px;
+  background-color: $brand-color-5;
+}
+
+.header-top__wrapper > div {
+  border-left: 1px solid #53C9FE;
+}
+
+.header-top__logo-container {
+  display: block;
+  margin-right: auto;
+}
+
+.header-top__logo-img {
+  &--desktop {
+    display: none;
+  }
+
+  &--mobile {
+    display: block;
+  }
+}
+
+.header-top__logo-container {
+  padding: 8px 15px 0 10px;
+}
+
+.header-top__phone-toggle {
+  display: block;
+  min-width: 65px;
+  height: 100%;
+  background-image: url("../img/icon-phone-header.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 28px 28px;
+}
+
+.header-top__phone-wrapper {
+  display: none;
+}
+
+.header-top__social {
+  display: none;
+}
+
+.header-top__profile {
+  @include d-flex(nowrap, row, center, center);
+  min-width: 65px;
+  height: auto;
+}
+
+.header-top__profile-img {
+  @include d-flex(nowrap, row, center, center);
+  width: 100%;
+  height: 100%;
+}
+
+.header-top__mobile-menu-toggle {
+  display: block;
+  min-width: 65px;
+  height: 100%;
+  background-image: url("../img/icon-burger-menu.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 28px 28px;
+}
+
+.header-top__mobile-menu-toggle {
+  display: block;
+}
+
+.header-top__mobile-menu {
+  display: none;
+}
+
+.header-top__profile-name {
+  display: none;
+}
+
+.header-top__currency-switch {
+  display: none;
+}
+
+@media (min-width: $tablet-width) {
+  .header-top__wrapper {
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+  }
+
+  .header-top__wrapper > div {
+    border-left: none;
+  }
+
+  .header-top__logo-container {
+    align-self: flex-start;
+    // margin-right: 50px;
+    margin-right: 0;
+    padding: 10px 0 20px;
+  }
+
+  .header-top__logo-img {
+    &--desktop {
+      display: block;
+    }
+
+    &--mobile {
+      display: none;
+    }
+  }
+
+  .header-top__phone-toggle {
+    display: none;
+  }
+
+  // .header-top__phone-container {
+  //   margin-right: 50px;
+  // }
+
+  .header-top__phone-wrapper {
+    @include d-flex(nowrap, column, flex-start, flex-start);
+    width: 185px;
+  }
+
+  .header-top__phone {
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 18px;
+  }
+
+  .header-top__time {
+    font-size: 14px;
+  }
+
+  .header-top__currency-switch {
+    display: block;
+  }
+
+  .header-top__profile {
+    min-width: 0;
+  }
+
+  .header-top__profile-img {
+    &--logged-out path {
+      fill: $brand-color-6;
+    }
+  }
+
+  .header-top__profile-img svg {
+    box-sizing: content-box;
+    padding: 3px;
+    border-radius: 50%;
+    border: 4px solid #ffb4a3;
+  }
+
+  .header-top__profile-img:hover .header-top__profile-name,
+  .header-top__profile-img:focus .header-top__profile-name {
+    color: $brand-color-6;
+  }
+
+  .header-top__mobile-menu-wrapper {
+    display: none;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .header-top__wrapper {
+    justify-content: flex-start;
+  }
+
+  .header-top__logo-container {
+    margin-right: 140px;
+  }
+
+  .header-top__phone-container {
+    margin-right: 100px;
+  }
+
+  .header-top__social {
+    @include d-flex(nowrap, row, space-between, center);
+    width: 166px;
+    margin-right: 100px;
+  }
+
+  .header-top__social-link {
+    display: block;
+    box-sizing: content-box;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    border-width: 4px;
+    border-style: solid;
+
+    &--fb {
+      background-image: url("../img/logo-fb.svg");
+      background-size: 11px 20px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-color: #1d5dbc;
+      border-color: #D4DFFD;
+
+      &:hover,
+      &:focus {
+        border-color: #1d5dbc;
+      }
+    }
+
+    &--vk {
+      background-image: url("../img/logo-vk.svg");
+      background-size: 24px 13px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-color: #2f93db;
+      border-color: #CFE6F0;
+
+      &:hover,
+      &:focus {
+        border-color: #2f93db;
+      }
+    }
+
+    &--ig {
+      background-image: url("../img/logo-ig.svg");
+      background-size: 18px 18px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-color: #bf64bc;
+      border-color: #F0DCEF;
+
+      &:hover,
+      &:focus {
+        border-color: #bf64bc;
+      }
+    }
+  }
+
+  .header-top__currency-switch {
+    margin-right: 78px;
+  }
+
+  .header-top__profile {
+    margin-left: auto;
+  }
+
+  .header-top__profile-name {
+    display: inline;
+    padding-left: 18px;
+    color: $brand-color-1;
+    font-weight: bold;
+  }
+}

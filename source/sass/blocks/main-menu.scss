@@ -1,0 +1,26 @@
+@media (min-width: $tablet-width) {
+  .main-menu__item {
+    @include d-flex(nowrap, row, center, center);
+    flex-grow: 1;
+    height: 100%;
+    border-left: 1px solid #53C9FE;
+
+    &:last-child {
+      border-right: 1px solid #53C9FE;
+    }
+  }
+
+  .main-menu__item a {
+    @include d-flex(nowrap, row, center, center);
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    font-size: 13px;
+    font-weight: bold;
+
+    &:hover,
+    &:focus {
+      background: $brand-color-5;
+    }
+  }
+}

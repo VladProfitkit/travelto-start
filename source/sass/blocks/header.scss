@@ -1,0 +1,14 @@
+.header {
+  @include reset;
+  @include d-flex(nowrap, column, flex-start, stretch);
+}
+
+.header__bottom-row {
+  display: none;
+}
+
+@media (min-width: $tablet-width) {
+  .header__bottom-row {
+    display: block;
+  }
+}

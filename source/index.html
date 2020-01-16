@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="vendor/css/bootstrapbootstrap-grid.min.css">
+  <link rel="stylesheet" href="css/style.min.css">
+  <title>Travelto</title>
+</head>
+<body>
+  <header class="header">
+    <div class="header__top-row header-top">
+      <div class="header-top__wrapper wrapper">
+        <a class="header-top__logo-container" href="index.html">
+          <img class="header-top__logo-img header-top__logo-img--mobile" alt="Логотип Travelto" src="img/logo-travelto-mobile.svg">
+          <img class="header-top__logo-img header-top__logo-img--desktop" alt="Логотип Travelto" src="img/logo-travelto-desktop.svg">
+        </a>
+        <div class="header-top__phone-container">
+          <a class="header-top__phone-toggle" href="contacts.html" aria-label="Развернуть контактную информацию"></a>
+          <div class="header-top__phone-wrapper">
+            <span class="header-top__phone">
+              +7 (495) 677-17-79
+            </span>
+            <span class="header-top__time">
+              Ежедневно с 10:00 до 20:00
+            </span>
+          </div>
+        </div>
+        <div class="header-top__social">
+          <a class="header-top__social-link header-top__social-link--fb" href="https://facebook.com/" target="_blank" aria-label="Travelto на сайте Facebook"></a>
+          <a class="header-top__social-link header-top__social-link--vk" href="https://vk.com/" target="_blank" aria-label="Travelto на сайте VK"></a>
+          <a class="header-top__social-link header-top__social-link--ig" href="https://instagram.com/" target="_blank" aria-label="Travelto на сайте Instagram"></a>
+        </div>
+        <div class="header-top__currency-switch currency-switch">
+          <div class="currency-switch__current" tabindex="1">
+            <span class="currency-switch__language currency-switch__language--rus">RUS</span>
+            <span class="currency-switch__currency">Руб.</span>
+          </div>
+          <ul class="currency-switch__list">
+            <li class="currency-switch__item" tabindex="1">
+              <span class="currency-switch__language currency-switch__language--rus">RUS</span>
+              <span class="currency-switch__currency">Руб.</span>
+            </li>
+            <li class="currency-switch__item" tabindex="1">
+              <span class="currency-switch__language currency-switch__language--en">EN</span>
+              <span class="currency-switch__currency">USD</span>
+            </li>
+          </ul>
+        </div>
+        <div class="header-top__profile header-top__profile--logged-out">
+          <a class="header-top__profile-img header-top__profile-img--logged-out" href="profile.html">
+            <svg width="29" height="29" viewBox="0 0 31 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill="#fff" d="M15.3342 29.5242C23.4298 29.5242 30.016 22.938 30.016 14.8423C30.016 6.74667 23.4298 0.160522 15.3342 0.160522C7.2385 0.160522 0.652344 6.74667 0.652344 14.8423C0.652344 22.938 7.2385 29.5242 15.3342 29.5242ZM15.3342 27.1575C12.5115 27.1575 9.90939 26.2005 7.83005 24.5973C8.75354 22.5211 10.8392 21.1246 13.1469 21.1246H17.4799C19.7995 21.1246 21.8934 22.529 22.8154 24.6155C20.74 26.208 18.1465 27.1575 15.3342 27.1575ZM11.4908 13.2289C11.4908 11.1096 13.2149 9.38556 15.3342 9.38556C17.4534 9.38556 19.1775 11.1096 19.1775 13.2289C19.1775 15.3481 17.4534 17.0726 15.3342 17.0726C13.2149 17.0726 11.4908 15.3485 11.4908 13.2289ZM15.3342 2.52714C22.125 2.52714 27.6494 8.0515 27.6494 14.8423C27.6494 17.9345 26.501 20.7619 24.6122 22.9269C23.2765 20.5801 20.8309 18.9923 18.0955 18.7833C20.1362 17.7646 21.5441 15.6607 21.5441 13.2289C21.5441 9.80443 18.7582 7.01894 15.3342 7.01894C11.9101 7.01894 9.1242 9.80483 9.1242 13.2289C9.1242 15.6591 10.531 17.7622 12.5696 18.7817C9.83233 18.9785 7.37917 20.5599 6.03721 22.9048C4.1594 20.7425 3.01896 17.9242 3.01896 14.8423C3.01896 8.0515 8.54332 2.52714 15.3342 2.52714Z" fill="white"/>
+            </svg>
+            <span class="header-top__profile-name header-top__profile-name--logged-out">Личный кабинет</span>
+          </a>
+        </div>
+        <div class="header-top__mobile-menu-wrapper">
+          <a class="header-top__mobile-menu-toggle" href="#" aria-label="Развернуть меню"></a>
+          <ul class="header-top__mobile-menu main-menu main-menu--logged-out main-menu--mobile">
+            <li class="main-menu__item">
+              <a href="company.html">О нашей компании</a>
+            </li>
+            <li class="main-menu__item">
+              <a href="choose.html">Выбрать отель</a>
+            </li>
+            <li class="main-menu__item">
+              <a href="invest.html">Инвестировать в отель</a>
+            </li>
+            <li class="main-menu__item">
+              <a href="add.html">+ Присоединить отель</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <nav class="header__bottom-row header-bottom header-bottom--logged-out">
+      <ul class="header-bottom__menu main-menu main-menu--logged-out wrapper">
+        <li class="main-menu__item">
+          <a href="company.html">О нашей компании</a>
+        </li>
+        <li class="main-menu__item">
+          <a href="choose.html">Выбрать отель</a>
+        </li>
+        <li class="main-menu__item">
+          <a href="invest.html">Инвестировать в отель</a>
+        </li>
+        <li class="main-menu__item">
+          <a href="add.html">+ Присоединить отель</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="main">
+
+  </main>
+
+  <footer class="footer">
+
+  </footer>
+  <script src="js/script.min.js"></script>
+</body>
+</html>
