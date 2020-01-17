@@ -20,7 +20,8 @@
 }
 
 .booking-search__search-form {
-  padding-top: 27px;
+  margin-top: 20px;
+  // padding-top: 27px;
 }
 
 @media (min-width: $tablet-width) {
@@ -30,6 +31,8 @@
   }
 
   .booking-search__heading {
+    padding-top: 73px;
+    margin-bottom: 34px;
     font-size: 24px;
   }
 
@@ -39,6 +42,11 @@
     color: #000;
     font-size: 15px;
     font-weight: normal;
+  }
+
+  .booking-search__search-form {
+    margin-top: 32px;
+    // padding-top: 70px;
   }
 }
 
@@ -50,11 +58,10 @@
 
   .booking-search__heading {
     max-width: 450px;
-    padding-top: 73px;
     font-size: 28px;
   }
 
-  .booking-search__subheading {
-    padding-top: 34px;
+  .booking-search__search-form {
+    margin-top: 55px;
   }
 }

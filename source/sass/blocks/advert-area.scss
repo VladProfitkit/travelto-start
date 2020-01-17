@@ -1,0 +1,15 @@
+.advert-area {
+  padding-top: 7px;
+}
+
+.advert-area__banner-field {
+  min-height: 186px;
+  margin: 0 auto;
+  background-color: #EBEBEB;
+}
+
+@media (min-width: $tablet-width) {
+  .advert-area {
+    padding-top: 20px;
+  }
+}

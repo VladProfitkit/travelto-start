@@ -1,80 +1,90 @@
+.currency-switch {
+  position: relative;
+}
+
+.currency-switch--mobile .currency-switch__current {
+  max-width: 235px;
+  margin: 20px 0 10px 10px;
+  background-color: #fff;
+}
+
+.currency-switch__current:hover,
+.currency-switch__current:focus {
+  border-color: #0097d9;
+}
+
 .currency-switch__list {
   @include list-reset;
+  position: absolute;
+  top: 46px;
+  left: 0;
   display: none;
+  width: 190px;
+  padding: 10px 15px 10px 60px;
+  background-color: #fff;
+  border-radius: 3px;
+  border: 1px solid #c1e1ef;
+  box-shadow: 0 0 10px rgba(0, 0, 0, .15);
+}
+
+.currency-switch__current:hover + .currency-switch__list,
+.currency-switch__current:focus + .currency-switch__list,
+.currency-switch__current:focus-within + .currency-switch__list {
+  display: block;
+}
+
+.currency-switch--mobile .currency-switch__list {
+  left: 10px;
+}
+
+.currency-switch__current {
+  padding: 10px 15px 10px 43px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+}
+
+.currency-switch__language {
+  position: relative;
+  display: inline-block;
+  min-width: 30px;
+  font-weight: bold;
+
+  &::before {
+    @include abs-pseudo;
+    top: 2px;
+    left: -34px;
+    width: 24px;
+    height: 16px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &::after {
+    @include abs-pseudo;
+    top: 4px;
+    left: 40px;
+    width: 1px;
+    height: 13px;
+    background-color: #9e9e9e;
+  }
+
+  &--rus::before {
+    background-image: url("../img/icon-rus.svg");
+  }
+
+  &--en::before {
+    background-image: url("../img/icon-en.svg");
+  }
+}
+
+.currency-switch__currency {
+  padding-left: 22px;
+  color: #9e9e9e;
 }
 
 @media (min-width: $tablet-width) {
   .currency-switch {
-    position: relative;
-    cursor: pointer;
-  }
-
-  .currency-switch__current:hover,
-  .currency-switch__current:focus {
-    border-color: #0097d9;
-  }
-
-  .currency-switch__list {
-    position: absolute;
-    top: 46px;
-    left: 0;
-    width: 190px;
-    padding: 10px 15px 10px 60px;
-    background-color: #fff;
-    border-radius: 3px;
-    border: 1px solid #c1e1ef;
-    box-shadow: 0 0 10px rgba(0, 0, 0, .15);
-  }
-
-  .currency-switch__current:hover + .currency-switch__list,
-  .currency-switch__current:focus + .currency-switch__list,
-  .currency-switch__current:focus-within + .currency-switch__list {
-    display: block;
-  }
-
-  .currency-switch__current {
-    padding: 10px 15px 10px 43px;
-    border: 1px solid #ddd;
-    border-radius: 3px;
-  }
-
-  .currency-switch__language {
-    position: relative;
-    display: inline-block;
-    min-width: 30px;
-    font-weight: bold;
-
-    &::before {
-      @include abs-pseudo;
-      top: 2px;
-      left: -34px;
-      width: 24px;
-      height: 16px;
-      background-size: contain;
-      background-repeat: no-repeat;
-      background-position: center;
-    }
-
-    &::after {
-      @include abs-pseudo;
-      top: 4px;
-      left: 40px;
-      width: 1px;
-      height: 13px;
-      background-color: #9e9e9e;
-    }
-
-    &--rus::before {
-      background-image: url("../img/icon-rus.svg");
-    }
-
-    &--en::before {
-      background-image: url("../img/icon-en.svg");
-    }
-  }
-
-  .currency-switch__currency {
-    padding-left: 22px;
-    color: #9e9e9e;
+      cursor: pointer;
   }
 }

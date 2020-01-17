@@ -4,6 +4,7 @@
   padding-right: 0;
   padding-left: 0;
   background-color: $brand-color-5;
+  box-shadow: 0 0 10px rgba(0, 0, 0, .15);
 }
 
 .header-top__wrapper > div {
@@ -39,8 +40,35 @@
   background-size: 28px 28px;
 }
 
+.header-top__phone-container {
+  // position: relative;
+}
+
 .header-top__phone-wrapper {
   display: none;
+
+  &--open {
+    @include d-flex(nowrap, column, center, center);
+    position: absolute;
+    top: 75px;
+    left: 0;
+    width: 100vw;
+    min-height: 138px;
+    background-color: $brand-color-4;
+    z-index: 3;
+  }
+}
+
+.header-top__phone {
+  color: #fff;
+  font-weight: bold;
+  font-size: 21px;
+  padding-bottom: 20px;
+}
+
+.header-top__time {
+  color: #fff;
+  font-size: 14px;
 }
 
 .header-top__social {
@@ -69,20 +97,67 @@
   background-size: 28px 28px;
 }
 
-.header-top__mobile-menu-toggle {
-  display: block;
+.header-top__mobile-menu {
+  // display: none;
+
+  &--open {
+    @include list-reset;
+    @include d-flex(nowrap, column, flex-start, stretch);
+    // position: absolute;
+    // top: 75px;
+    // left: 0;
+    // display: block;
+    // width: 100vw;
+    // background-color: $brand-color-4;
+    // z-index: 3;
+  }
 }
 
-.header-top__mobile-menu {
-  display: none;
+.header-top__mobile-menu .main-menu__item {
+  &:not(:last-of-type) {
+    border-bottom: 1px solid #56c6f8;
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: #2bb5f2;
+  }
+}
+
+.header-top__mobile-menu .main-menu__item a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 15px 0 15px 10px;
+  color: #fff;
+  font-weight: bold;
 }
 
 .header-top__profile-name {
   display: none;
 }
 
+.header-top__mobile-menu-container {
+  display: none;
+
+  &--open {
+    position: absolute;
+    top: 75px;
+    left: 0;
+    display: block;
+    width: 100vw;
+    background-color: $brand-color-4;
+    z-index: 3;
+  }
+}
+
 .header-top__currency-switch {
   display: none;
+
+  &--mobile {
+    display: block;
+  }
 }
 
 @media (min-width: $tablet-width) {
@@ -90,6 +165,7 @@
     justify-content: space-between;
     align-items: center;
     background-color: #fff;
+    box-shadow: none;
   }
 
   .header-top__wrapper > div {
@@ -123,17 +199,24 @@
 
   .header-top__phone-wrapper {
     @include d-flex(nowrap, column, flex-start, flex-start);
-    width: 185px;
+    position: static;
+    width: 237px;
+    height: auto;
+    min-height: 0;
+    background-color: transparent;
   }
 
   .header-top__phone {
     margin-bottom: 5px;
+    padding-bottom: 0;
     font-weight: bold;
     font-size: 18px;
+    color: $brand-color-1;
   }
 
   .header-top__time {
     font-size: 14px;
+    color: $brand-color-1;
   }
 
   .header-top__currency-switch {
@@ -238,9 +321,9 @@
     }
   }
 
-  .header-top__currency-switch {
-    margin-right: 78px;
-  }
+  // .header-top__currency-switch {
+  //   margin-right: 78px;
+  // }
 
   .header-top__profile {
     margin-left: auto;
