@@ -9,7 +9,7 @@ $(document).ready(function() {
     }
 
     function closeMobileMenu() {
-       mainMenuMobile.removeClass('header-top__mobile-menu--open');
+       mainMenuMobile.removeClass('header-top__mobile-menu-container--open');
     }
 
     phoneButtonMobile.click(function(e){

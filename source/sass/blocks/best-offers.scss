@@ -1,0 +1,70 @@
+.best-offers__heading {
+  @include reset;
+  padding: 20px 40px 20px;
+  font-weight: bold;
+  font-size: 18px;
+  text-align: center;
+}
+
+.best-offers__hotels {
+  @include d-flex(nowrap, row, flex-start, stretch);
+  padding-left: 24px;
+  overflow-x: scroll;
+}
+
+.best-offers__item {
+  margin-right: 7px;
+  flex-shrink: 0;
+}
+
+.best-offers__more-btn-wrapper {
+  display: none;
+}
+
+@media (min-width: $tablet-width) {
+  .best-offers__heading {
+    padding: 0;
+    margin-top: 50px;
+    margin-bottom: 40px;
+    font-size: 28px;
+  }
+
+  .best-offers__hotels {
+    flex-wrap: wrap;
+    padding-left: 0;
+  }
+
+  .best-offers__item {
+    margin-right: 0;
+  }
+
+  .best-offers__more-btn-wrapper {
+    @include d-flex(nowrap, row, center, stretch);
+    margin-top: 45px;
+    margin-bottom: 45px;
+  }
+
+  .best-offers__more-btn {
+    @include d-flex(nowrap, column, center, center);
+    min-width: 220px;
+    min-height: 52px;
+    color: #0098DB;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 223%;
+    background-color: #fff;
+    border: 1px solid $brand-color-4;
+    border-radius: 26px;
+  }
+
+  .best-offers__more-btn:hover,
+  .best-offers__more-btn:focus {
+    box-shadow: 0 0 10px rgba(#0098DB, .25);
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .best-offers__hotels {
+    position: relative;
+  }
+}
