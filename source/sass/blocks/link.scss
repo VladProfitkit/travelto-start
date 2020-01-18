@@ -1,0 +1,12 @@
+.link {
+  color: $brand-color-4;
+  font-weight: bold;
+  font-size: 13px;
+  line-height: auto;
+  text-decoration: underline;
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
+}

@@ -1,0 +1,12 @@
+.btn {
+  @include d-flex(nowrap, row, center, center);
+  color: #fff;
+  background-color: $brand-color-6;
+  border-radius: 3px;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    box-shadow: 0 0 15px rgba($brand-color-6, .66);
+  }
+}

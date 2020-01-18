@@ -131,14 +131,6 @@
   border-radius: 5px;
 }
 
-.hotel-item__reviews {
-  color: $brand-color-4;
-  font-weight: bold;
-  font-size: 13px;
-  line-height: auto;
-  text-decoration: underline;
-}
-
 .hotel-item__price-container {
   @include d-flex(nowrap, row, center, center);
   margin-top: auto;
@@ -268,12 +260,9 @@
     width: 280px;
     min-height: 50px;
     margin-bottom: 10px;
-    color: #fff;
     font-weight: 900;
     font-size: 15px;
     line-height: auto;
-    background-color: $brand-color-6;
-    border-radius: 3px;
   }
 
   .hotel-item__wrapper:hover .hotel-item__price-wrapper,
@@ -285,11 +274,6 @@
   .hotel-item__wrapper:focus .hotel-item__price-old {
     position: relative;
     top: 4px;
-  }
-
-  .hotel-item__booking-btn:hover,
-  .hotel-item__booking-btn:focus {
-    box-shadow: 0 0 15px rgba($brand-color-6, .66);
   }
 
   .hotel-item__fav-btn {

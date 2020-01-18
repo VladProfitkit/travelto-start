@@ -1,0 +1,15 @@
+.subscription-section {
+  min-height: 481px;
+  background-color: #eef9fc;
+  background-image: url("../img/banner-subscription-mobile.png");
+  background-position: center;
+  background-size: cover;
+}
+
+
+@media (min-width: $tablet-width) {
+  .subscription-section {
+    min-height: 406px;
+    background-image: url("../img/banner-subscription-desktop.png");
+  }
+}

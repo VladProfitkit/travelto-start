@@ -1,6 +1,6 @@
 .company-index__heading {
   @include reset;
-  padding: 35px 20px;
+  padding: 25px 20px;
   font-weight: bold;
   font-size: 18px;
   line-height: 168%;
@@ -19,14 +19,6 @@
   display: none;
 }
 
-.company-index__link {
-  color: $brand-color-4;
-  font-weight: bold;
-  font-size: 13px;
-  line-height: auto;
-  text-decoration: underline;
-}
-
 .company-index__map {
   width: 100%;
   height: 380px;
@@ -36,6 +28,10 @@
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+.company-index__features {
+  margin-bottom: 52px;
 }
 
 .company-index__feature-list {
@@ -120,6 +116,10 @@
     flex-shrink: 0;
     margin: 0;
     background-image: url("../img/index-map-desktop.png");
+  }
+
+  .company-index__features {
+    margin-bottom: 0;
   }
 
   .company-index__feature-list {
