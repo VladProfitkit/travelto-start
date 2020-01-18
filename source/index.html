@@ -111,6 +111,7 @@
       </ul>
     </nav>
   </header>
+
   <main class="main">
     <section class="booking-search">
       <div class="booking-search__contains wrapper">
@@ -122,7 +123,7 @@
         </h2>
         <form class="booking-search__search-form booking-form" action="index.html" method="post">
           <div class="booking-form__input-wrapper booking-form__input-wrapper--hotel">
-            <input class="booking-form__input booking-form__input--hotel" id="formHotel" name="hotel" type="text" placeholder="Отель">
+            <input class="booking-form__input booking-form__input--hotel" id="inputHotel" name="hotel" type="text" placeholder="Отель">
             <!-- <select class="booking-form__input booking-form__input--hotel" id="formHotel" name="hotel">
               <option value="hotel-1">Отель</option>
               <option value="hotel-2">Название отеля</option>
@@ -130,27 +131,27 @@
             </select> -->
           </div>
           <div class="booking-form__input-wrapper booking-form__input-wrapper--checkin">
-            <select class="booking-form__input booking-form__input--checkin" id="formCheckIn" name="checkin">
+            <select class="booking-form__input booking-form__input--checkin" id="inputCheckIn" name="checkin">
               <option value="checkin-1">Заезд</option>
               <option value="checkin-2">Заезд</option>
               <option value="checkin-3">Заезд</option>
             </select>
           </div>
           <div class="booking-form__input-wrapper booking-form__input-wrapper--checkout">
-            <select class="booking-form__input booking-form__input--checkout" id="formCheckOut" name="checkout">
+            <select class="booking-form__input booking-form__input--checkout" id="inputCheckOut" name="checkout">
               <option value="checkout-1">Отъезд</option>
               <option value="checkout-2">Отъезд</option>
               <option value="checkout-3">Отъезд</option>
             </select>
           </div>
           <div class="booking-form__input-wrapper booking-form__input-wrapper--people">
-            <select class="booking-form__input booking-form__input--people" id="formPeople" name="people">
+            <select class="booking-form__input booking-form__input--people" id="inputPeople" name="people">
               <option value="people-1">2 взрослых - один номер</option>
               <option value="people-2">3 взрослых - один номер</option>
               <option value="people-3">4 взрослых - один номер</option>
             </select>
           </div>
-          <button class="booking-form__submit-btn btn" type="submit">Начать поиск</button>
+          <button class="booking-form__submit-btn btn" id="bookingSearchSubmit" type="submit">Начать поиск</button>
         </form>
       </div>
     </section>
@@ -509,13 +510,31 @@
     </section>
 
     <section class="subscription-section">
-
+      <div class="subscription-section__mobile-headings">
+        <h2 class="subscription-section__heading subscription-section__heading--mobile">Новостная рассылка</h2>
+        <h3 class="subscription-section__subheading subscription-section__subheading--mobile">Подписка на новости, акции и скидки</h3>
+      </div>
+      <div class="subscription-section__content-wrapper">
+        <h2 class="subscription-section__heading">Новостная рассылка</h2>
+        <h3 class="subscription-section__subheading">Подписка на новости, акции и скидки</h3>
+        <form class="subscription-section__form" action="index.html">
+          <input class="subscription-section__email-field" id="inputSubscriptionEmail" type="email" name="email" placeholder="введите ваш email">
+          <button class="subscription-section__form-btn btn" id="subscriptionSubmit" type="submit">Подписаться</button>
+        </form>
+        <p class="subscription-section__description">
+          Нажимая «Подписаться», вы соглашаетесь с
+          <a class="subscription-section__link link" href="service-rules.html">правилами использования сервиса</a>
+          и
+          <a class="subscription-section__link link" href="privacy.html">обработки персональных данных</a>
+        </p>
+      </div>
     </section>
   </main>
 
   <footer class="footer">
 
   </footer>
+
   <script src="vendor/js/picturefill.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
   <script src="js/script.js"></script>

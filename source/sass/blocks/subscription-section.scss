@@ -1,15 +1,121 @@
 .subscription-section {
   min-height: 481px;
+  padding-bottom: 40px;
   background-color: #eef9fc;
   background-image: url("../img/banner-subscription-mobile.png");
   background-position: center;
   background-size: cover;
 }
 
+.subscription-section__mobile-headings {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  padding-left: 10px;
+}
+
+.subscription-section__heading {
+  @include reset;
+  display: none;
+  font-size: 18px;
+  font-weight: bold;
+  color: #1C8EC0;
+
+  &--mobile {
+    display: inline-block;
+    margin-top: 75px;
+  }
+}
+
+.subscription-section__subheading {
+  @include reset;
+  display: none;
+  font-size: 15px;
+  font-weight: normal;
+
+  &--mobile {
+    display: inline-block;
+    margin-top: 15px;
+    padding-right: 80px;
+  }
+}
+
+.subscription-section__content-wrapper {
+  @include d-flex(nowrap, column, flex-start, strerch);
+  width: calc(100% - 20px);
+  max-width: 420px;
+  // min-height: 280px;
+  margin: 15px auto 0;
+  padding: 25px 10px 25px;
+  background-color: rgba(#fff, .46);
+  border: 1px solid #fff;
+  border-radius: 3px;
+}
+
+.subscription-section__email-field {
+  display: block;
+  width: 100%;
+  max-width: 400px;
+  min-height: 56px;
+  margin: 0 auto 8px;
+  padding-left: 50px;
+  background-color: #fff;
+  border: 1px solid #D9E7ED;
+  border-radius: 3px;
+  box-shadow: 0 0 10px #DCF4FF;
+}
+
+.subscription-section__form-btn {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  min-height: 56px;
+  margin: 0 auto;
+  font-weight: bold;
+  font-size: 16px;
+  border: none;
+
+  &::before {
+    @include abs-pseudo;
+    top: -47px;
+    left: 14px;
+    width: 23px;
+    height: 25px;
+    background-image: url("../img/icon-letter.svg");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+}
+
+.subscription-section__description {
+  max-width: 400px;
+  margin: 15px auto 0;
+}
 
 @media (min-width: $tablet-width) {
   .subscription-section {
     min-height: 406px;
     background-image: url("../img/banner-subscription-desktop.png");
+  }
+
+  .subscription-section__mobile-headings {
+    display: none;
+  }
+
+  .subscription-section__heading {
+    display: inline-block;
+
+    &--mobile {
+      display: none;
+    }
+  }
+
+  .subscription-section__subheading {
+    display: inline-block;
+
+    &--mobile {
+      display: none;
+    }
   }
 }
