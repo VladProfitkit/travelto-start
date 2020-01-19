@@ -131,6 +131,12 @@
 
   &--open {
     position: absolute;
+    top: -2px;
+    left: 50%;
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    border: 3px solid $brand-color-4;
+    transform: translateX(-50%);
     z-index: 5;
   }
 }
