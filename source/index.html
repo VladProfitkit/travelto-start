@@ -14,8 +14,8 @@
     <div class="header__top-row header-top">
       <div class="header-top__wrapper wrapper">
         <a class="header-top__logo-container" href="index.html">
-          <img class="header-top__logo-img header-top__logo-img--mobile" alt="Логотип Travelto" src="img/logo-travelto-mobile.svg">
-          <img class="header-top__logo-img header-top__logo-img--desktop" alt="Логотип Travelto" src="img/logo-travelto-desktop.svg">
+          <img class="header-top__logo-img header-top__logo-img--mobile" alt="Логотип Travelto" src="img/logo-travelto-mobile.svg" width="101" height="53">
+          <img class="header-top__logo-img header-top__logo-img--desktop" alt="Логотип Travelto" src="img/logo-travelto-desktop.svg" width="140" height="74">
         </a>
         <div class="header-top__phone-container">
           <a class="header-top__phone-toggle" href="contacts.html" aria-label="Развернуть контактную информацию"></a>
@@ -193,7 +193,7 @@
             </p>
             <div class="hotel-item__price-container">
               <p class="hotel-item__price-wrapper">
-                <span class="hotel-item__price"><nobr>8 990 &#8381;</nobr></span>
+                <span class="hotel-item__price">8 990 &#8381;</span>
                 <span class="hotel-item__price-measure">/ за ночь</span>
               </p>
               <span class="hotel-item__price-old">12 990</span>
@@ -230,7 +230,7 @@
             </p>
             <div class="hotel-item__price-container">
               <p class="hotel-item__price-wrapper">
-                <span class="hotel-item__price"><nobr>8 990 &#8381;</nobr></span>
+                <span class="hotel-item__price">8 990 &#8381;</span>
                 <span class="hotel-item__price-measure">/ за ночь</span>
               </p>
               <span class="hotel-item__price-old">12 990</span>
@@ -266,7 +266,7 @@
             </p>
             <div class="hotel-item__price-container">
               <p class="hotel-item__price-wrapper">
-                <span class="hotel-item__price"><nobr>8 990 &#8381;</nobr></span>
+                <span class="hotel-item__price">8 990 &#8381;</span>
                 <span class="hotel-item__price-measure">/ за ночь</span>
               </p>
               <span class="hotel-item__price-old">12 990</span>
@@ -303,7 +303,7 @@
             </p>
             <div class="hotel-item__price-container">
               <p class="hotel-item__price-wrapper">
-                <span class="hotel-item__price"><nobr>8 990 &#8381;</nobr></span>
+                <span class="hotel-item__price">8 990 &#8381;</span>
                 <span class="hotel-item__price-measure">/ за ночь</span>
               </p>
               <span class="hotel-item__price-old">12 990</span>
@@ -340,7 +340,7 @@
             </p>
             <div class="hotel-item__price-container">
               <p class="hotel-item__price-wrapper">
-                <span class="hotel-item__price"><nobr>8 990 &#8381;</nobr></span>
+                <span class="hotel-item__price">8 990 &#8381;</span>
                 <span class="hotel-item__price-measure">/ за ночь</span>
               </p>
               <span class="hotel-item__price-old">12 990</span>
@@ -377,7 +377,7 @@
             </p>
             <div class="hotel-item__price-container">
               <p class="hotel-item__price-wrapper">
-                <span class="hotel-item__price"><nobr>8 990 &#8381;</nobr></span>
+                <span class="hotel-item__price">8 990 &#8381;</span>
                 <span class="hotel-item__price-measure">/ за ночь</span>
               </p>
               <span class="hotel-item__price-old">12 990</span>
@@ -413,7 +413,7 @@
             </p>
             <div class="hotel-item__price-container">
               <p class="hotel-item__price-wrapper">
-                <span class="hotel-item__price"><nobr>8 990 &#8381;</nobr></span>
+                <span class="hotel-item__price">8 990 &#8381;</span>
                 <span class="hotel-item__price-measure">/ за ночь</span>
               </p>
               <span class="hotel-item__price-old">12 990</span>
@@ -450,7 +450,7 @@
             </p>
             <div class="hotel-item__price-container">
               <p class="hotel-item__price-wrapper">
-                <span class="hotel-item__price"><nobr>8 990 &#8381;</nobr></span>
+                <span class="hotel-item__price">8 990 &#8381;</span>
                 <span class="hotel-item__price-measure">/ за ночь</span>
               </p>
               <span class="hotel-item__price-old">12 990</span>
@@ -518,7 +518,7 @@
         <h2 class="subscription-section__heading">Новостная рассылка</h2>
         <h3 class="subscription-section__subheading">Подписка на новости, акции и скидки</h3>
         <form class="subscription-section__form" action="index.html">
-          <input class="subscription-section__email-field" id="inputSubscriptionEmail" type="email" name="email" placeholder="введите ваш email">
+          <input class="subscription-section__email-field" id="inputSubscriptionEmail" type="email" name="email" placeholder="введите ваш email" required>
           <button class="subscription-section__form-btn btn" id="subscriptionSubmit" type="submit">Подписаться</button>
         </form>
         <p class="subscription-section__description">
@@ -532,9 +532,54 @@
   </main>
 
   <footer class="footer">
-
+    <nav class="footer__navigation">
+      <div class="footer__nav-column">
+        <h3 class="footer__column-heading footer__column-heading--open footer__column-heading--no-js">Сотрудничество</h3>
+        <ul class="footer__column-list footer__column-list--open">
+          <li class="footer__column-item"><a class="footer__nav-link" href="add.html">Добавить отель</a></li>
+          <li class="footer__column-item"><a class="footer__nav-link" href="hotel-auth.html">Вход для отелей</a></li>
+          <li class="footer__column-item"><a class="footer__nav-link" href="referal.html">Парнерская программа</a></li>
+          <li class="footer__column-item"><a class="footer__nav-link" href="advertisement.html">Реклама</a></li>
+        </ul>
+      </div>
+      <div class="footer__nav-column">
+        <h3 class="footer__column-heading footer__column-heading--open footer__column-heading--no-js">О нашей компании</h3>
+        <ul class="footer__column-list footer__column-list--open">
+          <li class="footer__column-item"><a class="footer__nav-link" href="callback.html">Обратная связь</a></li>
+          <li class="footer__column-item"><a class="footer__nav-link" href="faq.html">Часто задаваемые вопросы</a></li>
+          <li class="footer__column-item"><a class="footer__nav-link" href="privacy.html">Политика конфиденциальности</a></li>
+          <li class="footer__column-item"><a class="footer__nav-link" href="cookies.html">Политика использования<br><span>&nbsp;</span>файлов cookie</a></li>
+          <li class="footer__column-item"><a class="footer__nav-link" href="conditions.html">Условия использования</a></li>
+        </ul>
+      </div>
+      <div class="footer__nav-column">
+        <h3 class="footer__column-heading footer__column-heading--open footer__column-heading--no-js">Помощь</h3>
+        <ul class="footer__column-list footer__column-list--open">
+          <li class="footer__column-item"><a class="footer__nav-link" href="about-us.html">О нас</a></li>
+          <li class="footer__column-item"><a class="footer__nav-link" href="career.html">Карьера</a></li>
+          <li class="footer__column-item"><a class="footer__nav-link" href="team.html">Наша команда</a></li>
+          <li class="footer__column-item"><a class="footer__nav-link" href="news.html">Новости и события</a></li>
+          <li class="footer__column-item"><a class="footer__nav-link" href="blog.html">Блог</a></li>
+        </ul>
+      </div>
+      <div class="footer__nav-column footer__nav-column--additional">
+        <h3 class="footer__additional-heading">Нужна помощь?</h3>
+        <a class="footer__phone" href="tel:+74957774050">+7 (495) 777-40-50</a>
+        <a class="footer__callback" href="callback.html">Заказать звонок</a><br>
+        <span class="footer__address">г. Москва, Варшавское ш, д.68 к.3</span>
+      </div>
+    </nav>
+    <div class="footer__copyrights">
+      <a class="footer__logo-container" href="index.html">
+        <img class="footer__logo footer__logo--mobile" alt="Логотип Travelto" src="img/logo-footer-travelto-mobile.svg" width="100" height="53">
+        <img class="footer__logo footer__logo--desktop" alt="Логотип Travelto" src="img/logo-footer-travelto-desktop.svg" width="133" height="70">
+      </a>
+      <p class="footer__copyrights-text"><span class="footer__copyrights-span">© 2009-2019&nbsp;</span><span class="footer__copyrights-span footer__copyrights-span--no-mobile">Интернет магазинВсе права защищены.<br></span><span class="footer__copyrights-span">Запрещено использование материалов сайта без согласия автора.</span></p>
+    </div>
   </footer>
 
+  <script src="https://unpkg.com/focus-within/browser"></script>
+  <script>focusWithin(document)</script>
   <script src="vendor/js/picturefill.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
   <script src="js/script.js"></script>

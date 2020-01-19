@@ -35,8 +35,9 @@
 
   &--mobile {
     display: inline-block;
+    // max-width: 220px;
     margin-top: 15px;
-    padding-right: 80px;
+    padding-right: 90px;
   }
 }
 
@@ -63,6 +64,11 @@
   border: 1px solid #D9E7ED;
   border-radius: 3px;
   box-shadow: 0 0 10px #DCF4FF;
+
+  &:placeholder {
+    color: #848484;
+    opacity: 1;
+  }
 }
 
 .subscription-section__form-btn {
@@ -95,8 +101,17 @@
 
 @media (min-width: $tablet-width) {
   .subscription-section {
+    @include d-flex(nowrap, column, center, center);
     min-height: 406px;
+    padding-top: 0;
+    padding-bottom: 0;
     background-image: url("../img/banner-subscription-desktop.png");
+  }
+
+  .subscription-section__content-wrapper {
+    margin-top: 0;
+    padding-top: 35px;
+    padding-bottom: 35px;
   }
 
   .subscription-section__mobile-headings {
@@ -105,6 +120,7 @@
 
   .subscription-section__heading {
     display: inline-block;
+    font-size: 28px;
 
     &--mobile {
       display: none;
@@ -113,9 +129,64 @@
 
   .subscription-section__subheading {
     display: inline-block;
+    margin-top: 15px;
 
     &--mobile {
       display: none;
     }
+  }
+
+  .subscription-section__content-wrapper {
+    align-items: center;
+    max-width: 695px;
+    padding-right: 85px;
+    padding-left: 85px;
+  }
+
+  .subscription-section__form {
+    @include d-flex(nowrap, row, flex-start, center);
+    width: 100%;
+    height: 56px;
+    margin-top: 25px;
+    padding: 2px;
+    background-color: #fff;
+    border: 1px solid #D9E7ED;
+    border-radius: 3px;
+    box-shadow: 0 0 10px #DCF4FF;
+
+    &:hover,
+    &:focus,
+    &:focus-within {
+      border-color: #72C7EC;
+      box-shadow: 0 0 15px rgba(#0098DB, .16);
+    }
+  }
+
+  .subscription-section__email-field {
+    max-width: none;
+    min-height: 52px;
+    margin-bottom: 0;
+    border: none;
+    box-shadow: none;
+  }
+
+  .subscription-section__form-btn {
+    max-width: 205px;
+    min-height: 52px;
+    border-radius: 0 3px 3px 0;
+
+     &::before {
+       top: 50%;
+       left: -306px;
+       transform: translateY(-50%);
+     }
+  }
+
+  .subscription-section__description {
+    align-self: flex-start;
+    width: 100%;
+    max-width: none;
+    margin-top: 20px;
+    font-size: 13px;
   }
 }
