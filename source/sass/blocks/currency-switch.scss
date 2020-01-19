@@ -20,18 +20,22 @@
   left: 0;
   display: none;
   width: 190px;
-  padding: 10px 15px 10px 60px;
+  padding: 10px 0 10px;
   background-color: #fff;
   border-radius: 3px;
   border: 1px solid #c1e1ef;
   box-shadow: 0 0 10px rgba(0, 0, 0, .15);
+
+  &--open {
+    display: block;
+  }
 }
 
-.currency-switch__current:hover + .currency-switch__list,
-.currency-switch__current:focus + .currency-switch__list,
-.currency-switch__current:focus-within + .currency-switch__list {
-  display: block;
-}
+// .currency-switch__current:hover + .currency-switch__list,
+// .currency-switch__current:focus + .currency-switch__list,
+// .currency-switch__current:focus-within + .currency-switch__list {
+//   display: block;
+// }
 
 .currency-switch--mobile .currency-switch__list {
   left: 10px;
@@ -41,6 +45,14 @@
   padding: 10px 15px 10px 43px;
   border: 1px solid #ddd;
   border-radius: 3px;
+}
+
+.currency-switch__item-link {
+  display: block;
+  width: 100%;
+  // padding-right: 15px;
+  padding-left: 60px;
+  color: $brand-color-1;
 }
 
 .currency-switch__language {

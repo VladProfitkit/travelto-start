@@ -40,12 +40,16 @@
           </div>
           <ul class="currency-switch__list">
             <li class="currency-switch__item" tabindex="1">
-              <span class="currency-switch__language currency-switch__language--rus">RUS</span>
-              <span class="currency-switch__currency">Руб.</span>
+              <a class="currency-switch__item-link" href="ru.index.html">
+                <span class="currency-switch__language currency-switch__language--rus">RUS</span>
+                <span class="currency-switch__currency">Руб.</span>
+              </a>
             </li>
             <li class="currency-switch__item" tabindex="1">
-              <span class="currency-switch__language currency-switch__language--en">EN</span>
-              <span class="currency-switch__currency">USD</span>
+              <a class="currency-switch__item-link" href="en.index.html">
+                <span class="currency-switch__language currency-switch__language--en">EN</span>
+                <span class="currency-switch__currency">USD</span>
+              </a>
             </li>
           </ul>
         </div>
@@ -59,20 +63,24 @@
         </div>
         <div class="header-top__mobile-menu-wrapper">
           <a class="header-top__mobile-menu-toggle" href="#" aria-label="Развернуть меню"></a>
-          <div class="header-top__mobile-menu-container">
+          <div class="header-top__mobile-menu-container header-top__mobile-menu-container--open">
             <div class="header-top__currency-switch header-top__currency-switch--mobile currency-switch currency-switch--mobile">
               <div class="currency-switch__current" tabindex="1">
-                <span class="currency-switch__language currency-switch__language--rus">RUS</span>
-                <span class="currency-switch__currency">Сменить язык</span>
+                  <span class="currency-switch__language currency-switch__language--rus">RUS</span>
+                  <span class="currency-switch__currency">Сменить язык</span>
               </div>
               <ul class="currency-switch__list">
                 <li class="currency-switch__item" tabindex="1">
-                  <span class="currency-switch__language currency-switch__language--rus">RUS</span>
-                  <span class="currency-switch__currency">Руб.</span>
+                  <a class="currency-switch__item-link" href="ru.index.html">
+                    <span class="currency-switch__language currency-switch__language--rus">RUS</span>
+                    <span class="currency-switch__currency">Руб.</span>
+                  </a>
                 </li>
                 <li class="currency-switch__item" tabindex="1">
-                  <span class="currency-switch__language currency-switch__language--en">EN</span>
-                  <span class="currency-switch__currency">USD</span>
+                  <a class="currency-switch__item-link" href="en.index.html">
+                    <span class="currency-switch__language currency-switch__language--en">EN</span>
+                    <span class="currency-switch__currency">USD</span>
+                  </a>
                 </li>
               </ul>
             </div>
@@ -124,32 +132,51 @@
         <form class="booking-search__search-form booking-form" action="index.html" method="post">
           <div class="booking-form__input-wrapper booking-form__input-wrapper--hotel">
             <input class="booking-form__input booking-form__input--hotel" id="inputHotel" name="hotel" type="text" placeholder="Отель">
-            <!-- <select class="booking-form__input booking-form__input--hotel" id="formHotel" name="hotel">
+            <!-- <select class="booking-form__input booking-form__input--hotel" id="inputHotel" name="hotel">
               <option value="hotel-1">Отель</option>
               <option value="hotel-2">Название отеля</option>
               <option value="hotel-3">Название отеля</option>
             </select> -->
+            <div class="booking-form__modal-overlay"></div>
+            <div class="booking-form__modal booking-form__modal--hotel">
+
+            </div>
           </div>
           <div class="booking-form__input-wrapper booking-form__input-wrapper--checkin">
-            <select class="booking-form__input booking-form__input--checkin" id="inputCheckIn" name="checkin">
+            <input class="booking-form__input booking-form__input--checkin" id="inputCheckIn" name="checkin" type="text" placeholder="Заезд">
+            <!-- <select class="booking-form__input booking-form__input--checkin" id="inputCheckIn" name="checkin">
               <option value="checkin-1">Заезд</option>
               <option value="checkin-2">Заезд</option>
               <option value="checkin-3">Заезд</option>
-            </select>
+            </select> -->
+            <div class="booking-form__modal-overlay"></div>
+            <div class="booking-form__modal booking-form__modal--checkin">
+
+            </div>
           </div>
           <div class="booking-form__input-wrapper booking-form__input-wrapper--checkout">
-            <select class="booking-form__input booking-form__input--checkout" id="inputCheckOut" name="checkout">
+            <input class="booking-form__input booking-form__input--checkout" id="inputCheckOut" name="checkout" type="text" placeholder="Отъезд">
+            <!-- <select class="booking-form__input booking-form__input--checkout" id="inputCheckOut" name="checkout">
               <option value="checkout-1">Отъезд</option>
               <option value="checkout-2">Отъезд</option>
               <option value="checkout-3">Отъезд</option>
-            </select>
+            </select> -->
+            <div class="booking-form__modal-overlay"></div>
+            <div class="booking-form__modal booking-form__modal--checkout">
+
+            </div>
           </div>
           <div class="booking-form__input-wrapper booking-form__input-wrapper--people">
-            <select class="booking-form__input booking-form__input--people" id="inputPeople" name="people">
+            <input class="booking-form__input booking-form__input--people" id="inputPeople" name="people" type="text" placeholder="2 взрослых - один номер">
+            <!-- <select class="booking-form__input booking-form__input--people" id="inputPeople" name="people">
               <option value="people-1">2 взрослых - один номер</option>
               <option value="people-2">3 взрослых - один номер</option>
               <option value="people-3">4 взрослых - один номер</option>
-            </select>
+            </select> -->
+            <div class="booking-form__modal-overlay"></div>
+            <div class="booking-form__modal booking-form__modal--people">
+
+            </div>
           </div>
           <button class="booking-form__submit-btn btn" id="bookingSearchSubmit" type="submit">Начать поиск</button>
         </form>

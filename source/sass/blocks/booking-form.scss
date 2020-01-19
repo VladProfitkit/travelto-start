@@ -7,6 +7,22 @@
   box-shadow: 0 0 10px rgba(#53C9FE, .44);
 }
 
+.booking-form__modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(#000, .2);
+  cursor: default;
+  z-index: 3;
+
+  &--open {
+    display: block;
+  }
+}
+
 .booking-form__input-wrapper {
   position: relative;
   height: 60px;
@@ -85,6 +101,18 @@
       background-image: url("../img/icon-select-arrows.svg");
     }
   }
+
+  &--open {
+
+    &::before {
+      background-image: url("../img/icon-pin-blue.svg");
+      z-index: 6;
+    }
+
+    &::after {
+      z-index: 6;
+    }
+  }
 }
 
 .booking-form__input {
@@ -99,6 +127,11 @@
   &::placeholder {
     color: #000;
     opacity: 1;
+  }
+
+  &--open {
+    position: absolute;
+    z-index: 5;
   }
 }
 
@@ -141,6 +174,12 @@ select.booking-form__input option {
 
     &--checkout {
       display: none;
+    }
+
+    &--open {
+      &::before {
+        background-image: url("../img/icon-pin.svg");
+      }
     }
   }
 
