@@ -19,6 +19,7 @@ $(document).ready(function() {
       $(this).click(function(e) {
         e.preventDefault();
         $(this).children('.booking-form__modal-overlay').addClass('booking-form__modal-overlay--open');
+        $(this).children('.interactive-input').addClass('interactive-input--open');
         if ($(this).children('.booking-form__input').hasClass('booking-form__input--hotel')) {
           $(this).addClass('booking-form__input-wrapper--open');
           $(this).children('.booking-form__input').addClass('booking-form__input--open');
@@ -34,6 +35,7 @@ $(document).ready(function() {
         $(this).removeClass('booking-form__modal-overlay--open');
         $(this).parent(bookingFormInputWrapper).removeClass('booking-form__input-wrapper--open');
         $(this).siblings('.booking-form__input').removeClass('booking-form__input--open');
+        $(this).siblings('.interactive-input').removeClass('interactive-input--open');
         e.stopPropagation();
       });
     });

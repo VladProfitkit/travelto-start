@@ -138,8 +138,20 @@
               <option value="hotel-3">Название отеля</option>
             </select> -->
             <div class="booking-form__modal-overlay"></div>
-            <div class="booking-form__modal booking-form__modal--hotel">
-
+            <div class="booking-form__modal booking-form__modal--hotel interactive-input interactive-input--hotel">
+              <div class="interactive-input__header">
+                <input class="interactive-input__checkbox-toggle visually-hidden-input" id="hotelsDiscountToggle" type="checkbox">
+                <label class="interactive-input__toggle-label" for="hotelsDiscountToggle"></label>
+                <span class="interactive-input__toggle-option interactive-input__toggle-option--selected">все</span>
+                <span class="interactive-input__toggle-option">акции</span>
+              </div>
+              <ul class="interactive-input__option-list">
+                <li class="interactive-input__option"><a class="interactive-input__option-link" href="hotel.html">Название Отеля</a></li>
+                <li class="interactive-input__option"><a class="interactive-input__option-link" href="hotel.html">Название Отеля</a></li>
+                <li class="interactive-input__option"><a class="interactive-input__option-link" href="hotel.html">Название Отеля</a></li>
+                <li class="interactive-input__option"><a class="interactive-input__option-link" href="hotel.html">Название Отеля</a></li>
+                <li class="interactive-input__option"><a class="interactive-input__option-link" href="hotel.html">Название Отеля</a></li>
+              </ul>
             </div>
           </div>
           <div class="booking-form__input-wrapper booking-form__input-wrapper--checkin">
@@ -150,7 +162,7 @@
               <option value="checkin-3">Заезд</option>
             </select> -->
             <div class="booking-form__modal-overlay"></div>
-            <div class="booking-form__modal booking-form__modal--checkin">
+            <div class="booking-form__modal booking-form__modal--checkin interactive-input interactive-input--calendar">
 
             </div>
           </div>
@@ -162,7 +174,7 @@
               <option value="checkout-3">Отъезд</option>
             </select> -->
             <div class="booking-form__modal-overlay"></div>
-            <div class="booking-form__modal booking-form__modal--checkout">
+            <div class="booking-form__modal booking-form__modal--checkout interactive-input interactive-input--calendar">
 
             </div>
           </div>
@@ -174,7 +186,7 @@
               <option value="people-3">4 взрослых - один номер</option>
             </select> -->
             <div class="booking-form__modal-overlay"></div>
-            <div class="booking-form__modal booking-form__modal--people">
+            <div class="booking-form__modal booking-form__modal--people interactive-input interactive-input--people">
 
             </div>
           </div>
