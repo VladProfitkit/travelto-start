@@ -17,7 +17,7 @@ $(document).ready(function() {
     //открытие модалки по клику на любой из инпутов в форме бронирования
     bookingFormInputWrapper.each(function() {
       $(this).click(function(e) {
-        e.preventDefault();
+        // e.preventDefault();
         $(this).children('.booking-form__modal-overlay').addClass('booking-form__modal-overlay--open');
         $(this).children('.interactive-input').addClass('interactive-input--open');
         if ($(this).children('.booking-form__input').hasClass('booking-form__input--hotel')) {
@@ -31,7 +31,7 @@ $(document).ready(function() {
     //закрытие модалки по клику на оверлей модалки формы бронирования
     bookingFormOverlay.each(function() {
       $(this).click(function(e) {
-        e.preventDefault();
+        // e.preventDefault();
         $(this).removeClass('booking-form__modal-overlay--open');
         $(this).parent(bookingFormInputWrapper).removeClass('booking-form__input-wrapper--open');
         $(this).siblings('.booking-form__input').removeClass('booking-form__input--open');
