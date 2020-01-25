@@ -3,7 +3,7 @@
   top: 50%;
   left: 50%;
   display: none;
-  width: calc(100% - 20px);
+  width: calc(100vw - 20px);
   min-height: 214px;
   background-color: #fff;
   border: 2px solid $brand-color-4;
@@ -17,6 +17,10 @@
     max-height: 305px;
     transform: translate(0, 0);
     overflow-y: scroll;
+  }
+
+  &--people {
+    height: 214px;
   }
 
   &--open {
@@ -111,4 +115,111 @@
   color: $brand-color-1;
   font-size: 15px;
   line-height: 18px;
+}
+
+.interactive-input__settings-list {
+  @include list-reset;
+  @include d-flex(nowrap, column, flex-start, flex-start);
+  height: 100%;
+}
+
+.interactive-input__setting {
+  @include d-flex(nowrap, row, space-between, center);
+  flex-grow: 1;
+  width: 100%;
+  padding-right: 27px;
+  padding-left: 18px;
+
+  &:not(:last-child) {
+    border-bottom: 1px solid #E9E9E9;
+  }
+}
+
+.interactive-input__setting-name {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 30px;
+}
+
+.interactive-input__setting-controls {
+  @include d-flex(nowrap, row, space-between, center);
+  width: 110px;
+}
+
+.interactive-input__setting-button {
+  width: 34px;
+  height: 34px;
+  background-color: #fff;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 14px;
+  border: 1px solid #e2e2e2;
+  border-radius: 50%;
+  box-shadow: 0 0 8px rgba(#000, .05);
+  cursor: pointer;
+
+  &--increase {
+    background-image: url("../img/icon-plus.svg");
+  }
+
+  &--decrease {
+    background-image: url("../img/icon-minus.svg");
+  }
+
+  &:hover,
+  &:focus {
+    border-color: #eee;
+  }
+
+  &:active {
+    box-shadow: none;
+  }
+}
+
+.interactive-input__setting-count {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 168.2%;
+}
+
+@media (min-width: $tablet-width) {
+  .interactive-input {
+    &--hotel {
+      width: 471px;
+    }
+
+    &--calendar {
+      width: 704px;
+      height: 292px;
+    }
+
+    &--people {
+      position: absolute;
+      top: 175px;
+      left: 145px;
+      width: 292px;
+      height: 214px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .interactive-input {
+    &--hotel {
+      width: calc(100% + 2px);
+    }
+
+    &--calendar {
+      position: absolute;
+      top: 213px;
+      left: 350px;
+    }
+
+    &--people {
+      width: 100%;
+      left: 152px;
+    }
+  }
 }

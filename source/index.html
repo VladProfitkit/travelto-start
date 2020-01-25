@@ -120,7 +120,7 @@
     </nav>
   </header>
 
-  <main class="main">
+  <main class="main main--no-js">
     <section class="booking-search">
       <div class="booking-search__contains wrapper">
         <h1 class="booking-search__heading">
@@ -189,7 +189,32 @@
             </select> -->
             <div class="booking-form__modal-overlay"></div>
             <div class="booking-form__modal booking-form__modal--people interactive-input interactive-input--people">
-
+              <ul class="interactive-input__settings-list">
+                <li class="interactive-input__setting">
+                  <span class="interactive-input__setting-name">Номера</span>
+                  <div class="interactive-input__setting-controls">
+                    <button class="interactive-input__setting-button interactive-input__setting-button--increase"></button>
+                    <span class="interactive-input__setting-count">0+</span>
+                    <button class="interactive-input__setting-button interactive-input__setting-button--decrease"></button>
+                  </div>
+                </li>
+                <li class="interactive-input__setting">
+                  <span class="interactive-input__setting-name">Взрослых</span>
+                  <div class="interactive-input__setting-controls">
+                    <button class="interactive-input__setting-button interactive-input__setting-button--increase"></button>
+                    <span class="interactive-input__setting-count">0+</span>
+                    <button class="interactive-input__setting-button interactive-input__setting-button--decrease"></button>
+                  </div>
+                </li>
+                <li class="interactive-input__setting">
+                  <span class="interactive-input__setting-name">Детей</span>
+                  <div class="interactive-input__setting-controls">
+                    <button class="interactive-input__setting-button interactive-input__setting-button--increase"></button>
+                    <span class="interactive-input__setting-count">0+</span>
+                    <button class="interactive-input__setting-button interactive-input__setting-button--decrease"></button>
+                  </div>
+                </li>
+              </ul>
             </div>
           </div>
           <button class="booking-form__submit-btn btn" id="bookingSearchSubmit" type="submit">Начать поиск</button>

@@ -11,6 +11,8 @@ $(document).ready(function() {
     var bookingFormInput = $('.booking-form__input');
     // var bookingFormHotel = $('#inputHotel');
     var bookingFormOverlay = $('.booking-form__modal-overlay');
+    var main = $('.main');
+    var hotelsCheckbox = $('.interactive-input__toggle-label');
 
     // TODO: Запрет ввода и скролла за оверлеем модалок
 
@@ -40,7 +42,12 @@ $(document).ready(function() {
       });
     });
 
-    //приведение колонок навигации в футере на мобильных в интерактивное состояние при включенном js
+    //переключение выделения выбранной опции у чекбокса во вкладке "отели" в форме бронирования ("все"-"акции")
+    hotelsCheckbox.click(function() {
+      hotelsCheckbox.siblings('.interactive-input__toggle-option').toggleClass('interactive-input__toggle-option--selected');
+    });
+
+    //приведение навигации в интерактивное состояние при включенном js
     function closeFooterMenu() {
       footerMenuColumn.removeClass('footer__column-list--open');
       footerMenuToggle.removeClass('footer__column-heading--no-js');
@@ -51,6 +58,10 @@ $(document).ready(function() {
        phoneInfo.removeClass('header-top__phone-wrapper--open');
     };
 
+    function mainHasJs() {
+      main.removeClass('main--no-js');
+    };
+
     function closeMobileMenu() {
        mainMenuMobile.removeClass('header-top__mobile-menu-container--open');
     };
@@ -59,6 +70,7 @@ $(document).ready(function() {
       languageList.removeClass('currency-switch__list--open');
     };
 
+    mainHasJs();
     closeMobileMenu();
     closeFooterMenu();
 

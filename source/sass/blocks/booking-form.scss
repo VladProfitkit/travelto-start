@@ -182,6 +182,13 @@ select.booking-form__input option {
       display: none;
     }
 
+    &--checkin,
+    &--people {
+      &::after {
+        display: none;
+      }
+    }
+
     &--open {
       &::before {
         background-image: url("../img/icon-pin.svg");
@@ -191,6 +198,11 @@ select.booking-form__input option {
 
   .booking-form__input {
     width: 100%;
+
+    &--open {
+      left: calc(50% - 1px);
+      width: calc(100% + 1px);
+    }
   }
 
   .booking-form__submit-btn {

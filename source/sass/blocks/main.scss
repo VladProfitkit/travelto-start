@@ -1,0 +1,13 @@
+.main {
+  &--no-js {
+    padding-top: 272px;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .main {
+    &--no-js {
+      padding-top: 0;
+    }
+  }
+}
