@@ -13,6 +13,9 @@ $(document).ready(function() {
     var bookingFormOverlay = $('.booking-form__modal-overlay');
     var main = $('.main');
     var hotelsCheckbox = $('.interactive-input__toggle-label');
+    var profileButton = $('.header-top__profile-img--logged-out');
+    var modalAuthorize = $('.modal--authorize');
+    var modalRegister = $('.modal--register');
 
     // TODO: Запрет ввода и скролла за оверлеем модалок
 
@@ -54,8 +57,13 @@ $(document).ready(function() {
       footerMenuToggle.removeClass('footer__column-heading--open');
     };
 
+    // function closeModal() {
+    //   modalAuthorize.removeClass('modal--open');
+    //   modalRegister.removeClass('modal--open');
+    // }
+
     function closePhoneInfo() {
-       phoneInfo.removeClass('header-top__phone-wrapper--open');
+      phoneInfo.removeClass('header-top__phone-wrapper--open');
     };
 
     function mainHasJs() {
@@ -107,8 +115,44 @@ $(document).ready(function() {
       e.stopPropagation();
     });
 
+    //открытие формы авторизации по нажатию на кнопку в хедере
+    profileButton.click(function(e) {
+      e.preventDefault();
+      closePhoneInfo();
+      closeMobileMenu();
+      modalAuthorize.addClass('modal--open');
+    });
+
+    //закрытие модалок авторизации/регистрации по клику на крестик
+    $('.modal').each(function() {
+      $(this).find('.modal__close-btn').click(function(e) {
+        e.preventDefault();
+        $(this).parents('.modal').removeClass('modal--open');
+      });
+    });
+
+    //закрытие модалок авторизации/регистрации по клику на оверлей
+    $(window).click(function(e) {
+        if ($(e.target).is('.modal')) {
+            $('.modal').removeClass('modal--open');
+        };
+    });
+
+    //переключение между авторизацией и регистрацией
+    modalAuthorize.find('.modal__alter-button--sign-up').click(function(e) {
+      e.preventDefault();
+      modalAuthorize.removeClass('modal--open');
+      modalRegister.addClass('modal--open');
+    });
+
+    modalRegister.find('.modal__alter-button--sign-in').click(function(e) {
+      e.preventDefault();
+      modalRegister.removeClass('modal--open');
+      modalAuthorize.addClass('modal--open');
+    });
+
     //закрытие выпадающих меню при клике за пределами
-    $(document).click(function () {
+    $(window).click(function () {
       closePhoneInfo();
       closeMobileMenu();
       closeLanguageToggle();

@@ -583,7 +583,7 @@
       <div class="subscription-section__content-wrapper">
         <h2 class="subscription-section__heading">Новостная рассылка</h2>
         <h3 class="subscription-section__subheading">Подписка на новости, акции и скидки</h3>
-        <form class="subscription-section__form" action="index.html">
+        <form class="subscription-section__form" action="index.html" method="post">
           <input class="subscription-section__email-field" id="inputSubscriptionEmail" type="email" name="email" placeholder="введите ваш email" required>
           <button class="subscription-section__form-btn btn" id="subscriptionSubmit" type="submit">Подписаться</button>
         </form>
@@ -643,6 +643,69 @@
       <p class="footer__copyrights-text"><span class="footer__copyrights-span">© 2009-2019&nbsp;</span><span class="footer__copyrights-span footer__copyrights-span--no-mobile">Интернет магазинВсе права защищены.<br></span><span class="footer__copyrights-span">Запрещено использование материалов сайта без согласия автора.</span></p>
     </div>
   </footer>
+
+  <div class="modal modal--authorize">
+    <section class="modal__section modal__section--authorize">
+      <div class="modal__section-header">
+        <button class="modal__close-btn"></button>
+        <h2 class="modal__section-heading">Авторизация</h2>
+      </div>
+      <form class="modal__form modal__form--authorize" action="#" method="post">
+        <label class="modal__form-label">
+          <span class="modal__label-span">E-Mail адрес</span>
+          <input class="modal__form-input" type="email">
+        </label>
+        <label class="modal__form-label">
+          <span class="modal__label-span">Пароль</span>
+          <input class="modal__form-input" type="password">
+        </label>
+        <a class="modal__password-recovery link" href="pass-recovery.html">Забыли свой пароль?</a>
+        <button class="modal__form-submit btn" type="submit">Войти</button>
+      </form>
+      <p class="modal__text modal__text--authorize">
+        Вход в личный кабинет на сайте подразумевает обязательное согласие с
+        <a class="modal__link link" href="privacy.html">политикой конфиденциальности</a>
+      </p>
+      <a class="modal__alter-button modal__alter-button--sign-up" href="register.html">Создать аккаунт</a>
+      <div class="modal__section-footer">
+        <span class="modal__footer-text">Или войти через</span>
+        <a class="modal__icon-link modal__icon-link--google-plus" href="https://plus.google.com/"></a>
+        <a class="modal__icon-link modal__icon-link--facebook" href="https://facebook.com/"></a>
+      </div>
+    </section>
+  </div>
+
+  <div class="modal modal--register">
+    <section class="modal__section modal__section--register">
+      <div class="modal__section-header">
+        <button class="modal__close-btn"></button>
+        <h2 class="modal__section-heading">Регистрация</h2>
+      </div>
+      <form class="modal__form modal__form--register" action="#" method="post">
+        <label class="modal__form-label">
+          <span class="modal__label-span">E-Mail адрес</span>
+          <input class="modal__form-input" type="email">
+        </label>
+        <label class="modal__form-label">
+          <span class="modal__label-span">Пароль</span>
+          <input class="modal__form-input" type="password">
+        </label>
+        <label class="modal__form-label">
+          <span class="modal__label-span">Введите пароль еще раз</span>
+          <input class="modal__form-input" type="password">
+        </label>
+        <input class="modal__form-checkbox visually-hidden-input" id="registerAgreement" type="checkbox">
+        <label class="modal__checkbox-label" for="registerAgreement"></label>
+        <p class="modal__text modal__text--register">
+          Я ознакомился с
+          <a class="modal__link link" href="privacy.html">соглашением сервиса</a>
+           и согласен с условиями пре­до­ста­вле­ния услуг
+        </p>
+        <button class="modal__form-submit btn" type="submit">Зарегистрироваться</button>
+      </form>
+      <a class="modal__alter-button modal__alter-button--sign-in" href="auth.html">У меня уже есть аккаунт</a>
+    </section>
+  </div>
 
   <script src="https://unpkg.com/focus-within/browser"></script>
   <script>focusWithin(document)</script>

@@ -1,0 +1,255 @@
+.modal {
+  position: absolute;
+  top: 75px;
+  left: 0;
+  display: none;
+  width: 100%;
+  overflow-y: auto;
+  z-index: 10;
+
+  &--open {
+    display: block;
+  }
+}
+
+.modal__section {
+  @include d-flex(nowrap, column, flex-start, flex-start);
+  width: 100%;
+  // max-width: 400px;
+  margin: 0 auto;
+  padding-right: 10px;
+  padding-left: 10px;
+  background-color: #fff;
+  z-index: 12;
+
+  &--register {
+    padding-bottom: 44px;
+  }
+}
+
+.modal__section-header {
+  position: relative;
+  width: 100%;
+  padding-top: 55px;
+  padding-bottom: 25px;
+}
+
+.modal__close-btn {
+  @include abs-pseudo;
+  top: 21px;
+  right: 10px;
+  width: 30px;
+  height: 30px;
+  background-color: #fff;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 18px;
+  background-image: url("../img/icon-close.svg");
+  border: none;
+  cursor: pointer;
+}
+
+.modal__section-heading {
+  @include reset;
+  font-size: 21px;
+  font-weight: bold;
+  line-height: auto;
+  text-align: center;
+}
+
+.modal__form {
+  @include d-flex(nowrap, column, flex-start, center);
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.modal__form-label {
+  @include d-flex(nowrap, column, flex-start, center);
+  width: 100%;
+  max-width: 400px;
+  margin-bottom: 30px;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 253.6%;
+
+  &:last-of-type {
+    margin-bottom: 25px;
+  }
+}
+
+.modal__text {
+  @include reset;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  font-size: 13px;
+  line-height: 20px;
+
+  &--authorize {
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
+
+  &--register {
+    align-self: flex-start;
+    width: 250px;
+    margin-right: 0;
+    margin-bottom: 50px;
+    margin-left: 42px;
+  }
+}
+
+.modal__label-span {
+  align-self: flex-start;
+}
+
+.modal__form-input {
+  width: 100%;
+  max-width: 400px;
+  height: 50px;
+  padding: 10px 0 10px 20px;
+  border: 1px solid #baddf0;
+  border-radius: 3px;
+
+  &:focus {
+    border-color: $brand-color-4;
+  }
+}
+
+.modal__checkbox-label {
+  position: absolute;
+  top: 355px;
+  left: 0;
+  width: 18px;
+  height: 18px;
+  border: 1px solid #9C9C9C;
+  border-radius: 3px;
+
+  &:hover,
+  &:focus {
+    border-color: $brand-color-1;
+  }
+
+  &::before {
+    @include abs-pseudo;
+    display: none;
+    top: 3px;
+    left: 2px;
+    width: 13px;
+    height: 8px;
+    background-color: transparent;
+    border-bottom: 3px solid $brand-color-4;
+    border-left: 3px solid $brand-color-4;
+    transform: rotate(-50deg);
+    z-index: 15;
+  }
+}
+
+.modal__form-checkbox:checked + .modal__checkbox-label::before {
+  display: block;
+}
+
+.modal__password-recovery {
+  position: absolute;
+  top: 123px;
+  right: 0;
+}
+
+.modal__form-submit {
+  width: 100%;
+  max-width: 400px;
+  height: 50px;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: auto;
+  border: none;
+}
+
+.modal__alter-button {
+  @include d-flex(nowrap, row, center, center);
+  width: 100%;
+  max-width: 400px;
+  height: 50px;
+  margin: 0 auto;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: auto;
+  color: #797979;
+  border: 2px solid #DCDCDC;
+  border-radius: 3px;
+
+  &:hover,
+  &:focus {
+    box-shadow: 0 0 15px rgba($brand-color-1, .1);
+  }
+
+  &--sign-in {
+    margin-top: 14px;
+  }
+}
+
+.modal__section-footer {
+  @include d-flex(nowrap, row, flex-start, center);
+  width: 100%;
+  max-width: 400px;
+  margin: 39px auto 0;
+  padding-top: 26px;
+  padding-bottom: 56px;
+  border-top: 1px solid #D1D1D1;
+}
+
+.modal__footer-text {
+  display: inline-block;
+  margin-right: 30px;
+}
+
+.modal__icon-link {
+  display: block;
+  width: 40px;
+  height: 40px;
+  margin-right: 13px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+
+  &--google-plus {
+    background-image: url("../img/icon-auth-google-plus.svg");
+  }
+
+  &--facebook {
+    background-image: url("../img/icon-auth-facebook.svg");
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(#000, .2);
+  }
+
+  .modal__section {
+    @include center;
+    position: fixed;
+    width: 524px;
+    border: 3px solid $brand-color-4;
+    border-radius: 5px;
+    box-shadow: 0 0 25px rgba(#000, .38);
+    overflow-y: scroll;
+  }
+
+  .modal__section-heading {
+    font-size: 28px;
+  }
+
+  .modal__text {
+    &--register {
+      width: 360px;
+    }
+  }
+}
