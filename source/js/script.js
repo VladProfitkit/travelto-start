@@ -13,6 +13,7 @@ $(document).ready(function() {
     var bookingFormOverlay = $('.booking-form__modal-overlay');
     var main = $('.main');
     var hotelsCheckbox = $('.interactive-input__toggle-label');
+    var bookingPeopleSetting = $('.interactive-input__setting');
     var profileButton = $('.header-top__profile-img--logged-out');
     var modalAuthorize = $('.modal--authorize');
     var modalRegister = $('.modal--register');
@@ -48,6 +49,31 @@ $(document).ready(function() {
     //переключение выделения выбранной опции у чекбокса во вкладке "отели" в форме бронирования ("все"-"акции")
     hotelsCheckbox.click(function() {
       hotelsCheckbox.siblings('.interactive-input__toggle-option').toggleClass('interactive-input__toggle-option--selected');
+    });
+
+
+    //счеткики людей/номеров в соответствующем окне формы бронирования
+    bookingPeopleSetting.each(function() {
+      var countDisplay = $(this).find('.interactive-input__setting-count');
+      var count = 0;
+
+      $(this).find('.interactive-input__setting-button--increase').click(function(e) {
+        if (count >= 0 && count < 15) {
+          count++;
+          countDisplay.text(count);
+        };
+        e.preventDefault();
+      });
+      $(this).find('.interactive-input__setting-button--decrease').click(function(e) {
+        if (count > 1 && count <= 15) {
+          count--;
+          countDisplay.text(count);
+        } else if (count == 1) {
+          count--;
+          countDisplay.text('0+');
+        };
+        e.preventDefault();
+      });
     });
 
     //приведение навигации в интерактивное состояние при включенном js
